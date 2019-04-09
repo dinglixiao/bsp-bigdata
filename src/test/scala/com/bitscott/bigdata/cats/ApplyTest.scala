@@ -1,12 +1,15 @@
 package com.bitscott.bigdata.cats
 
-import org.junit.jupiter.api.{DisplayName, Test}
+import org.scalatest.FlatSpec
 
-@DisplayName("ApplyTest")
-class ApplyTest {
+class ApplyTest extends FlatSpec {
 
-  @Test
-  def t1(): Unit = {
-    assert(true)
+  def sayHello = "Hello"
+
+  "Test A" should "Given is Equal with return" in {
+    assert("Hello" equals (sayHello))
+  }
+  "Test B" should "Given is not Equal with return" in {
+    assert("World" equals (sayHello))
   }
 }

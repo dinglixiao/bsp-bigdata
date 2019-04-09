@@ -18,6 +18,7 @@
         <cats.version>1.6.0</cats.version>
         <scopt.version>3.7.1</scopt.version>
         <junit.version>5.4.1</junit.version>
+        <scalatest.version>3.0.7</scalatest.version>
     </properties>
 
     <repositories>
@@ -138,6 +139,13 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.12</artifactId>
+            <version>${scalatest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
