@@ -1,8 +1,10 @@
 package com.bitscott.cats
 
-import cats._, cats.instances._, cats.implicits._
-import scala.concurrent.Future
+import cats._
+import cats.implicits._
+
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 object ApplyApp extends App {
 
@@ -22,7 +24,7 @@ object ApplyApp extends App {
 
   def ff(a: Future[Int], b: Future[Int]) = (a |@| b).map(_ + _)
 
-  println((5.some, 6.some).mapN(_ + _))
+  println((5.some, 6.some, 2.some).mapN(_ + _ + _))
 
   println(1.show)
 }

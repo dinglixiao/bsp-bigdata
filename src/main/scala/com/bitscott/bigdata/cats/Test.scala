@@ -35,5 +35,4 @@ object Test extends App {
   val result = for (i <- 1 to 10) yield i * 2
   //  println(result)
 
-
 }

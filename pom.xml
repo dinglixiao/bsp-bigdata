@@ -17,6 +17,7 @@
         <flink.version>1.7.2</flink.version>
         <cats.version>1.6.0</cats.version>
         <scopt.version>3.7.1</scopt.version>
+        <junit.version>5.4.1</junit.version>
     </properties>
 
     <repositories>
@@ -129,6 +130,13 @@
             <groupId>com.github.scopt</groupId>
             <artifactId>scopt_2.12</artifactId>
             <version>${scopt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
