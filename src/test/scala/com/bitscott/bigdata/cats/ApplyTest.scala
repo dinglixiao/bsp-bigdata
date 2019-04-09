@@ -2,15 +2,23 @@ package com.bitscott.bigdata.cats
 
 import org.scalatest.FlatSpec
 
+import scala.collection.mutable.Stack
+
 class ApplyTest extends FlatSpec {
 
-  def sayHello = "Hello"
 
-  "Test A" should "Given is Equal with return" in {
-    assert("Hello" equals sayHello)
+  "A Stack" should "pop values in last-in-first-out order" in {
+    val stack = Stack[Int]()
+    stack.push(1)
+    stack.push(2)
+    assert(stack.pop === 2)
+    assert(stack.pop === 1)
   }
 
-  "Test B" should "Given is not Equal with return" in {
-    //    assert("World" equals  (sayHello))
+  it should "throw NoSuchElementException if an empty stack is popped" in {
+    val emptyStack = Stack[String]()
+    assertThrows[NoSuchElementException] {
+      emptyStack.pop
+    }
   }
 }
