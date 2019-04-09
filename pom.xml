@@ -13,7 +13,6 @@
         <scala.version>2.12.8</scala.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <spark.version>2.4.1</spark.version>
         <flink.version>1.7.2</flink.version>
         <cats.version>1.6.0</cats.version>
