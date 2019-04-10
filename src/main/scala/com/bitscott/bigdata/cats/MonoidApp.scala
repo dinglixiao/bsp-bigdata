@@ -3,6 +3,10 @@ package com.bitscott.bigdata.cats
 import cats.implicits._
 import cats.kernel.Monoid
 
+/**
+	* combine, empty
+	*
+	*/
 object MonoidApp extends App {
 	
 	Monoid[String].empty // ""

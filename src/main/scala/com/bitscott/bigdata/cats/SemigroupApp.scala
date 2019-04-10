@@ -3,6 +3,9 @@ package com.bitscott.bigdata.cats
 import cats.Semigroup
 import cats.implicits._
 
+/**
+	* combine
+	*/
 object SemigroupApp extends App {
 	
 	//  https://www.scala-exercises.org/cats/semigroup
