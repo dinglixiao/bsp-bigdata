@@ -1,6 +1,6 @@
 package com.bitscott.entity
 
 case class Car(val year: Int) {
-
-  var position: String = _
+	
+	var position: String = _
 }
