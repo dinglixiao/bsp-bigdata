@@ -25,5 +25,10 @@ object EitherApp extends App {
 	def parseInt(s: String): Option[Int] = Either.catchOnly[NumberFormatException](s.toInt).toOption
 	
 	val res = List("1", "2", "3").traverse(parseInt)
-	println(s"result = ${res}")
+	//	println(s"result = ${res}")
+	
+	val xv: List[Vector[Int]] = List(Vector(1, 2), Vector(3, 4))
+	//	println(s"xv.unite = ${xv.unite}")
+	
+	println((Option(1) -> Option("john")).getClass)
 }
