@@ -1,14 +1,12 @@
 package com.bitscott.cats
 
-import cats.implicits._
-import cats.syntax.option._
 import com.bitscott.entity.Car
-
-import scala.concurrent.Future
+import cats._
+import cats.implicits._
 
 object Test extends App {
 	
-	println(123.asRight[String])
+	//	println(123.asRight[String])
 	//  println("mom".reverse == "mom")
 	//  println("mom".reverse.eq("mom"))
 	
@@ -33,6 +31,13 @@ object Test extends App {
 	//  println((Integer.MIN_VALUE /: array) (Integer.max))
 	
 	val result = for (i <- 1 to 10) yield i * 2
+	
 	//  println(result)
+	
+	case class User(name: String)
+	
+	case class Users(ppl: List[User])
+	
+	val testUsers = List(User("test1"), User("test2")).asRight[List[User]]
 	
 }

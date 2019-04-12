@@ -126,6 +126,11 @@
             <artifactId>cats-testkit_2.12</artifactId>
             <version>${cats.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.typelevel</groupId>
+            <artifactId>cats-effect_2.12</artifactId>
+            <version>1.2.0</version>
+        </dependency>
 
         <dependency>
             <groupId>com.github.scopt</groupId>

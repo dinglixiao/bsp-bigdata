@@ -10,7 +10,7 @@ object FoldableApp extends App {
 	//	abc
 	Foldable[List].foldLeft(List("a", "b", "c"), "")(_ + _)
 	//	6
-	List(1, 2, 3).foldLeft(0)(_ + _)
+	//	List(1, 2, 3).foldLeft(0)(_ + _)
 	
 	//	3
 	Foldable[List].foldMap(List("a", "b", "c"))(_.length)

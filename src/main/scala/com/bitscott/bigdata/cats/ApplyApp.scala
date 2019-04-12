@@ -1,6 +1,8 @@
 package com.bitscott.cats
 
 import cats.Apply
+import cats.data.Validated
+import cats.data.Validated.{Invalid, Valid}
 import cats.implicits._
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -35,4 +37,21 @@ object ApplyApp extends App {
 	
 	//	println((5.some, 6.some, 2.some).mapN(_ + _ + _))
 	//	println(1.show)
+	
+	
+	type ErrOr[A] = Validated[String, A]
+	
+	val validInt: ErrOr[Int] = Valid(3)
+	val validBool: ErrOr[Boolean] = Valid(true)
+	val invalidInt: ErrOr[Int] = Invalid("Invalid int.")
+	val invalidBool: ErrOr[Boolean] = Invalid("Invalid boolean.")
+	
+	//	println(Apply[ErrOr].productL(validInt)(validBool))
+	//	println(Apply[ErrOr].productR(validInt)(validBool))
+	//	println(Apply[ErrOr].productR(validInt)(invalidBool))
+	//	println(Apply[ErrOr].productR(invalidInt)(invalidBool))
+	
+	//	println(validInt.productL(validBool))
+	
+	println((List(1, 2), List(3, 4), List(0, 2)).mapN(_ * _ * _))
 }
